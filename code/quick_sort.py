@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #
 # Quick sort algorithm
-# time complexity is O(n*log(n))
+# time complexity is O(n*lg(n))
 # worst case is O(n^2)
 #
 # Liang Wang @ University of Helsinki, Finland
