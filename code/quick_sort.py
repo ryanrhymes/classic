@@ -13,13 +13,14 @@ def quick_sort(L, p, r):
         q = partition(L, p, r)
         quick_sort(L, p, q - 1)
         quick_sort(L, q + 1, r)
-    return L
+    pass
 
 
 def partition(L, p, r):
     i = p - 1
     for j in range(p, r):
-        if L[i] < L[r]:
+        if L[j] < L[r]:
             i += 1
-            
-    pass
+            L[i], L[j] = L[j], L[i]
+    L[i+1], L[r] = L[r], L[i+1]
+    return i+1
