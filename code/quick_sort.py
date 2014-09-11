@@ -24,3 +24,8 @@ def partition(L, p, r):
             L[i], L[j] = L[j], L[i]
     L[i+1], L[r] = L[r], L[i+1]
     return i+1
+
+
+def sort(L):
+    quick_sort(L, 0, len(L) - 1)
+    return L
