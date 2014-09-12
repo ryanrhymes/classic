@@ -30,6 +30,12 @@ def main():
     print L
     print sort(L)
 
+    from insertion_sort import sort
+    print "Test insertion_sort", sort, '-'*20
+    L = get_random_numbers(10)
+    print L
+    print sort(L)
+
     pass
 
 
