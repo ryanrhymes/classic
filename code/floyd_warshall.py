@@ -2,6 +2,8 @@
 #
 # Floyd-Warshall algorithm
 #
+# FW algorithm is dynamic programming, bottom-up method.
+#
 # recursive form
 # d(i,j,k+1) = min(d(i,j,k), d(i,k+1,k)+d(k+1,j,k))
 #
