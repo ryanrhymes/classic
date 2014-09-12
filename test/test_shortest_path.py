@@ -26,10 +26,17 @@ def get_random_graph():
 def main():
 
     G = get_random_graph()
+
     from dijkstra import shortest
     print "Test Dijkstra", shortest, '-'*20
     print 'NetworkX =>', nx.shortest_path(G, 0, 50, 'weight')
     print 'Dijkstra =>', shortest(G, 0, 50)
+ 
+    from floyd_warshall import shortest
+    print "Test Floyd-Warshall", shortest, '-'*20
+    print 'NetworkX =>', nx.shortest_path(G, 0, 50, 'weight')
+    print 'Floyd-Warshall =>', shortest(G, 0, 50)
+
     pass
 
 
