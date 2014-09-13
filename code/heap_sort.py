@@ -17,18 +17,26 @@ import math
 
 
 def heap_sort(L):
+    build_max_heap(L)
+
+    hSize = len(L)
+    for i in xrange(hSize-1, 0, -1):
+        L[0], L[i] = L[i], L[0]
+        hSize -= 1
+        max_heapify(L, 0, hSize)
     return L
 
 
 def build_max_heap(L):
     # TC: linear time, O(n)
+    for i in xrange(int(math.floor((len(L)-1)/2)), -1, -1):
+        max_heapify(L, i, len(L))
     pass
 
 
-def max_heapify(L, i):
+def max_heapify(L, i, hSize):
     # TC: O(lg(n))
-    l = left(i);  r = right(i); 
-    largest = i;  hSize = len(L)
+    l = left(i);  r = right(i); largest = i;
     
     if l < hSize and L[l] > L[i]:
         largest = l
@@ -36,7 +44,7 @@ def max_heapify(L, i):
         largest = r
     if i != largest:
         L[i], L[largest] = L[largest], L[i]
-        max_heapify(L)
+        max_heapify(L, largest, hSize)
 
 
 def left(i): return 2*i+1
