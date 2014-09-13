@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 #
 # Quick sort algorithm
+#
+# Comparison-based sorting algorithm
+# In-place sorting algorithm
+#
 # time complexity is O(n*lg(n))
 # worst case is O(n^2)
 #

@@ -42,6 +42,12 @@ def main():
     print L
     print sort(L)
 
+    from heap_sort import sort
+    print "Test heap_sort", sort, '-'*20
+    L = get_random_numbers(10)
+    print L
+    print sort(L)
+
     pass
 
 

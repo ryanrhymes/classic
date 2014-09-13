@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 #
 # Merge sort algorithm
+#
+# Comparison-based sorting algorithm
+# NOT in-place sorting
+#
 # time complexity is \Theta(n*lg(n))
 #
 # Liang Wang @ University of Helsinki, Finland

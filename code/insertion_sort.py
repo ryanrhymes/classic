@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 #
 # Insertion sort algorithm
+#
+# Comparion-based sorting algorithm
+# In-place sorting
+#
 # best case time complexity is O(n)
 # worst case time complexity is \Theta(n^2)
 # in-place sorting 
