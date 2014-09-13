@@ -36,6 +36,12 @@ def main():
     print L
     print sort(L)
 
+    from radix_sort import sort
+    print "Test radix_sort", sort, '-'*20
+    L = get_random_numbers(10)
+    print L
+    print sort(L)
+
     pass
 
 
