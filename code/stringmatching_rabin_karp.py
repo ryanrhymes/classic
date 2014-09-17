@@ -2,7 +2,7 @@
 #
 # Rabin-Karp string matching algorithm
 #
-# Preprocess: \Theta(m)
+# Preprocess: \Theta(n)
 # Matching average case  O(n)
 # Matching worst case    O((n-m+1)*m)
 #

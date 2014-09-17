@@ -32,6 +32,10 @@ def main():
     print "Test Rabin-Karp matching", rabin_karp, '-'*20
     print "The matching index =>", rabin_karp(P, T)
 
+    from stringmatching_finite_automaton import finite_automaton
+    print "Test Finite Automaton matching", finite_automaton, '-'*20
+    print "The matching index =>", finite_automaton(P, T)
+
     pass
 
 
