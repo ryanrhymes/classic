@@ -18,4 +18,4 @@ def naive(P, T):
             idx = i
             break
 
-    return i
+    return idx

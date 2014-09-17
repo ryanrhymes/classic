@@ -15,17 +15,22 @@ sys.path.append('../code')
 
 
 def get_random_sample():
-    T = [ random.choice(string.letters[0:26]) for x in xrange(1000) ]
+    S = [ str(x) for x in xrange(10) ]
+    T = [ random.choice(S) for x in xrange(1000) ]
     T = ''.join(T)
     return (T, T[123:133])
+
 
 def main():
 
     T, P = get_random_sample()
-
     from stringmatching_naive import naive
     print "Test Naive matching", naive, '-'*20
-    print naive(P, T)
+    print "The matching index =>", naive(P, T)
+
+    from stringmatching_rabin_karp import rabin_karp
+    print "Test Rabin-Karp matching", rabin_karp, '-'*20
+    print "The matching index =>", rabin_karp(P, T)
 
     pass
 
