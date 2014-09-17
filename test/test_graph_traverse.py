@@ -16,7 +16,13 @@ sys.path.append('../code')
 
 def get_random_graph():
     G = nx.erdos_renyi_graph(100, 0.1)
-    return G
+    H = nx.Graph()
+    for u,v in G.edges():
+        d = random.uniform(1,10)
+        H.add_edge(u, v, weight=d)
+    for n in H.nodes(data=True):
+        n[1]['parent'] = None
+    return H
 
 
 def main():
@@ -37,7 +43,15 @@ def main():
 
     from graph_strongly_connected_component import SCC
     print "Test SCC", SCC, '-'*20
-    print 'SCC =>', SCC(G)
+    print 'SCC => done', SCC(G)
+
+    from graph_mst_prim import MST_PRIM
+    print "Test graph MST Prim", MST_PRIM, '-'*20
+    print 'Start with node 5 =>', MST_PRIM(G, 5)
+
+    from graph_mst_kruskal import MST_KRUSKAL
+    print "Test graph MST Kruskal", MST_KRUSKAL, '-'*20
+    print 'MST =>', len(G.edges()), len(MST_KRUSKAL(G))
 
     pass
 
