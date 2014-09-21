@@ -1,0 +1,36 @@
+Distributed Systems Notes
+
+
+1.  Replication helps distributed system scale up and improve performance. The only effective solution for fault-tolerance is redundancy.
+
+2.  Synchronization: physical clock and logical clock.
+
+3.  Physical clock: Network Time Protocol (NTP). Essentially by exchanging values, most algorithm based on estimating the delays.
+
+4.  Logical clock: Lamport clock. a->b => C(a)<C(b), cannot capture the causality. Can be used to implement Totally-Ordered Multicast.
+
+5.  Logical clock: Vector clock. a->b <=> C(a)<(b), can capture the causality. Therefore can be used to implement Causally-Ordered Multicast.
+
+6.  Totally-Ordered Multicast: node uses Lamport clock algorithm, sends back ACK(msg) and maintains a local queue. Eventually the system has a consistent view.
+
+7.  Causally-Ordered Multicast: similar to Totally ordered multicast, but uses Vector clock to tag messages.
+
+8.  Mutual exclusion: centralized solution and decentralized solution (Token-based or Ricart-Agrawala algorithm).
+
+9.  Ricart-Agrawala algorithm: a. not use, not want, send OK; b. use, not send OK; c. want, small number wins, not send OK if win. The algorithm is suitable for a small group with stable membership.
+
+10. Token Ring algorithm: simple passes the token to the next logical hop if not want, or hold the token until it finishes using.
+
+11. Comparison of the 4 algorithms for mutual exclusion: p.259
+
+12. Election algorithm: Bully algorithm and Ring algorithm.
+
+13. Data-Centric Consistency Model: continuous consistency, including numerical deviation, staleness deviation and ordering deviation.
+
+14. Ordering Consistency Models: sequential consistency, causal consistency..
+
+14. Client-Centric Consistency Model: No guarantees are given concerning concurrent assesses by different clients. Monotonic read, monotonic write, read your writes, writes follow reads.
+
+15. Consistency Protocol: an implementation of a specific consistency model. With respect to sequential consistency -> Primary-based protocol and Replicated-Write protocol. 
+
+16. Replicated-Write protocol: a. Active Replication; b. Quorum-Based Protocol. Always be careful of the scalability.
