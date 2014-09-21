@@ -1,0 +1,26 @@
+Notes for Concurrent programming
+
+
+1.  Mutual exclusion
+
+2.  Critical section
+
+3.  Deadlock, livelock and starvation.
+
+4.  Synchronization primitives: Semaphores and Monitors.
+
+5.  Mutual exclusion low-level solution: Dekker's algorithm and Lamport's Bakery algorithm.
+
+6.  Mutual exclusion mid-level solution: Semaphores, usually implemented in OS. P/V operations. Unstructured solution.
+
+7.  Mutual exclusion high-level solution: Monitors, structured solution, has condition variables.
+
+8.  3 classic problems distributed computing: mutual exclusion: Ricart-Agrawala algorithm and Token-ring algorithm.
+
+9.  3 classic problems distributed computing: termination detection, Dijkstra-Scholten algorithm (tree-based algorithm).
+
+10. 3 classic problems distributed computing: snapshot, Chandy-Lamport algorithm.
+
+11. Consensus: Byzantine General Algorithm. The number of generals must be bigger than 3t+1 if t is the number of traitors. I.e. No solution unless n >= 3t+1. Or using unforgettable signature (pub-key) to allow arbitrary number of traitors. In practice, Byzantine fault tolerance is too expensive to be practical.
+
+x. Verification: state diagram, temporal logic, spin model checker.

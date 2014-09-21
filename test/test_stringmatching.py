@@ -36,6 +36,10 @@ def main():
     print "Test Finite Automaton matching", finite_automaton, '-'*20
     print "The matching index =>", finite_automaton(P, T)
 
+    from stringmatching_kmp import KMP
+    print "Test Knuth-Morris-Pratt matching", KMP, '-'*20
+    print "The matching index =>", KMP(P, T)
+
     pass
 
 
